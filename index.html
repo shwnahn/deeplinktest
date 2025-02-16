@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간편 이체 테스트</title>
+</head>
+<body>
+    <h1>이체하기 테스트</h1>
+    <button onclick="location.href='intent://transfer?bank=국민&account=12345678901234&amount=10000#Intent;scheme=toss;package=viva.republica.toss;end;'">
+        토스로 이체하기
+    </button>
+    <button onclick="location.href='kakaopay://send?receiver_key=USER_ID&amount=10000'">
+        카카오페이로 이체하기
+    </button>
+</body>
+</html>
