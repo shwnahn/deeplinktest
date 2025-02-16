@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>간편 이체 테스트</title>
+    <title>뱅킹 앱 Deeplink 테스트</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        button { display: block; margin: 10px auto; padding: 15px; font-size: 16px; }
+    </style>
 </head>
 <body>
-    <h1>이체하기 테스트</h1>
-    <button onclick="location.href='intent://transfer?bank=국민&account=12345678901234&amount=10000#Intent;scheme=toss;package=viva.republica.toss;end;'">
-        토스로 이체하기
+    <h1>뱅킹 앱 Deeplink 테스트</h1>
+
+    <button onclick="location.href='kakaobank://transfer?to=1234567890&amount=10000'">
+        카카오뱅크 실행
     </button>
-    <button onclick="location.href='kakaopay://send?receiver_key=USER_ID&amount=10000'">
-        카카오페이로 이체하기
+
+    <button onclick="location.href='supertoss://send-money?amount=10000&to=1234567890'">
+        토스 실행
     </button>
+
+    <button onclick="location.href='shbmobilebank://transfer?account=1234567890&amount=10000'">
+        신한은행 실행
+    </button>
+
+    <p>이체 버튼을 누르면 해당 앱이 실행됩니다.</p>
 </body>
 </html>
